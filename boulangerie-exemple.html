@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ================================================
+       Boulangerie Au Pain Doré — Rennes
+       Créé par Amiri Studio | amiri.studio
+       ================================================ -->
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="croissant.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Local Rennes -->
+  <title>Boulangerie Au Pain Doré — Artisan Boulanger à Rennes (35000)</title>
+  <meta name="description" content="Boulangerie artisanale Au Pain Doré à Rennes. Baguettes tradition, croissants pur beurre, pains spéciaux et pâtisseries maison. Ouvert 7j/7 au cœur de Rennes." />
+  <meta name="keywords" content="boulangerie Rennes, boulanger artisan Rennes, pain maison Rennes, croissant Rennes, pâtisserie Rennes, Au Pain Doré" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aupaindore-rennes.fr" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Boulangerie Au Pain Doré — Artisan Boulanger à Rennes" />
+  <meta property="og:description" content="Baguettes tradition, croissants pur beurre et pâtisseries maison au cœur de Rennes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================================================
+       VARIABLES & RESET
+       ================================================ */
+    :root {
+      --or:        #C8860A;
+      --or-clair:  #E9A81D;
+      --or-pale:   #F5D98B;
+      --creme:     #FDF6E3;
+      --creme-2:   #F9EDD0;
+      --brun:      #5C3A1E;
+      --brun-clair:#8B5E3C;
+      --texte:     #2E1A0E;
+      --gris:      #6B6B6B;
+      --blanc:     #FFFFFF;
+      --ombre:     0 4px 24px rgba(92,58,30,0.13);
+      --ombre-lg:  0 12px 48px rgba(92,58,30,0.18);
+      --radius:    14px;
+      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--creme);
+      color: var(--texte);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.25;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ================================================
+       UTILITAIRES
+       ================================================ */
+    .container {
+      width: 90%;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-or {
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      color: var(--blanc);
+      box-shadow: 0 4px 18px rgba(200,134,10,0.35);
+    }
+
+    .btn-or:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,134,10,0.5);
+      background: linear-gradient(135deg, var(--or-clair), var(--or));
+    }
+
+    .btn-contour {
+      background: transparent;
+      color: var(--or);
+      border: 2px solid var(--or);
+    }
+
+    .btn-contour:hover {
+      background: var(--or);
+      color: var(--blanc);
+      transform: translateY(-2px);
+    }
+
+    .section-titre {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-titre .sur-titre {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 12px;
+    }
+
+    .section-titre h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--brun);
+      margin-bottom: 16px;
+    }
+
+    .section-titre p {
+      font-size: 1.05rem;
+      color: var(--gris);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .separateur {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--or), var(--or-clair));
+      border-radius: 2px;
+      margin: 16px auto 0;
+    }
+
+    /* ================================================
+       ANIMATIONS D'ENTRÉE
+       ================================================ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes flottement {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    .animate-fade-up {
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards;
+    }
+
+    /* ================================================
+       HEADER / NAVBAR
+       ================================================ */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0;
+      transition: var(--transition);
+      background: transparent;
+    }
+
+    header.scrolled {
+      background: rgba(253,246,227,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(92,58,30,0.1);
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      padding: 0 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icone {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 3px 12px rgba(200,134,10,0.35);
+    }
+
+    .logo-texte {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-nom {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brun);
+    }
+
+    header.scrolled .logo-nom { color: var(--brun); }
+
+    .logo-tagline {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--or);
+      font-weight: 700;
+    }
+
+    /* Navigation principale */
+    nav ul {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    nav ul a {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--blanc);
+      text-transform: uppercase;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    nav ul a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--or-clair);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    nav ul a:hover::after { width: 100%; }
+    nav ul a:hover { color: var(--or-pale); }
+
+    header.scrolled nav ul a { color: var(--brun); }
+    header.scrolled nav ul a:hover { color: var(--or); }
+
+    /* CTA header */
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-appel {
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      color: var(--blanc);
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      box-shadow: 0 3px 14px rgba(200,134,10,0.4);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .btn-appel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(200,134,10,0.55);
+    }
+
+    /* Menu burger mobile */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+
+    .burger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--blanc);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    header.scrolled .burger span { background: var(--brun); }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: var(--creme);
+      padding: 20px 5%;
+      border-top: 1px solid var(--creme-2);
+    }
+
+    .nav-mobile.open { display: flex; }
+
+    .nav-mobile a {
+      padding: 12px 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--brun);
+      border-bottom: 1px solid var(--creme-2);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ================================================
+       SECTION HERO
+       ================================================ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to bottom, rgba(30,15,5,0.62) 0%, rgba(30,15,5,0.42) 50%, rgba(30,15,5,0.72) 100%),
+        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1600&auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.04);
+      animation: zoom 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.12); }
+    }
+
+    .hero-contenu {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      padding: 0 20px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,134,10,0.22);
+      border: 1px solid rgba(233,168,29,0.5);
+      backdrop-filter: blur(6px);
+      color: var(--or-pale);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    .hero-titre {
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      color: var(--blanc);
+      margin-bottom: 20px;
+      animation: fadeUp 0.7s 0.4s ease both;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+
+    .hero-titre em {
+      color: var(--or-clair);
+      font-style: italic;
+    }
+
+    .hero-sous-titre {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 40px;
+      font-weight: 300;
+      animation: fadeUp 0.7s 0.6s ease both;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.8s ease both;
+    }
+
+    .hero-ctas .btn-or {
+      font-size: 1rem;
+      padding: 16px 36px;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: flottement 2s ease-in-out infinite;
+    }
+
+    .hero-scroll::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6));
+    }
+
+    /* ================================================
+       BANDEAU CHIFFRES
+       ================================================ */
+    #bandeau {
+      background: linear-gradient(135deg, var(--brun), var(--brun-clair));
+      padding: 52px 0;
+    }
+
+    .bandeau-grille {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      text-align: center;
+    }
+
+    .bandeau-item {
+      padding: 8px 20px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .bandeau-item:last-child { border-right: none; }
+
+    .bandeau-chiffre {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--or-clair);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .bandeau-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.78);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+
+    /* ================================================
+       SECTION SPÉCIALITÉS
+       ================================================ */
+    #specialites {
+      padding: 100px 0;
+      background: var(--creme);
+    }
+
+    .specialites-grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+
+    /* Carte produit */
+    .carte-produit {
+      background: var(--blanc);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--ombre);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .carte-produit:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--ombre-lg);
+    }
+
+    .carte-produit-img {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .carte-produit-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .carte-produit:hover .carte-produit-img img {
+      transform: scale(1.07);
+    }
+
+    .carte-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      color: var(--blanc);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .carte-corps {
+      padding: 24px;
+    }
+
+    .carte-corps h3 {
+      font-size: 1.25rem;
+      color: var(--brun);
+      margin-bottom: 10px;
+    }
+
+    .carte-corps p {
+      font-size: 0.92rem;
+      color: var(--gris);
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .carte-pied {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .carte-prix {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--or);
+      font-weight: 700;
+    }
+
+    .carte-etoiles {
+      color: var(--or-clair);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    /* ================================================
+       SECTION À PROPOS
+       ================================================ */
+    #apropos {
+      padding: 100px 0;
+      background: var(--creme-2);
+      overflow: hidden;
+    }
+
+    .apropos-grille {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .apropos-images {
+      position: relative;
+    }
+
+    .apropos-img-principale {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--ombre-lg);
+    }
+
+    .apropos-img-secondaire {
+      position: absolute;
+      bottom: -28px;
+      right: -28px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 6px solid var(--creme);
+      box-shadow: var(--ombre-lg);
+    }
+
+    .apropos-badge-annee {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(200,134,10,0.45);
+      color: var(--blanc);
+      text-align: center;
+    }
+
+    .apropos-badge-annee strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .apropos-badge-annee span {
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    .apropos-texte .sur-titre {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--or);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .apropos-texte h2 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      color: var(--brun);
+      margin-bottom: 20px;
+    }
+
+    .apropos-texte p {
+      color: var(--gris);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .apropos-valeurs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .valeur-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .valeur-icone {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 3px 12px rgba(200,134,10,0.3);
+    }
+
+    .valeur-texte h4 {
+      font-size: 1rem;
+      color: var(--brun);
+      margin-bottom: 4px;
+    }
+
+    .valeur-texte p {
+      font-size: 0.88rem;
+      color: var(--gris);
+      margin: 0;
+    }
+
+    /* ================================================
+       SECTION TÉMOIGNAGES
+       ================================================ */
+    #temoignages {
+      padding: 100px 0;
+      background: var(--brun);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #temoignages::before {
+      content: '"';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 22rem;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #temoignages .section-titre h2 { color: var(--creme); }
+    #temoignages .section-titre .sur-titre { color: var(--or-clair); }
+    #temoignages .section-titre p { color: rgba(255,255,255,0.65); }
+
+    .temoignages-grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .carte-temoignage {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .carte-temoignage:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-5px);
+      border-color: rgba(233,168,29,0.3);
+    }
+
+    .temoignage-etoiles {
+      color: var(--or-clair);
+      font-size: 1rem;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .temoignage-texte {
+      font-style: italic;
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .temoignage-auteur {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .auteur-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blanc);
+      flex-shrink: 0;
+    }
+
+    .auteur-info strong {
+      display: block;
+      color: var(--creme);
+      font-size: 0.95rem;
+    }
+
+    .auteur-info span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ================================================
+       SECTION CONTACT
+       ================================================ */
+    #contact {
+      padding: 100px 0;
+      background: var(--creme);
+    }
+
+    .contact-grille {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* Infos pratiques */
+    .contact-info h3 {
+      font-size: 1.6rem;
+      color: var(--brun);
+      margin-bottom: 28px;
+    }
+
+    .info-bloc {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .info-icone {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .info-contenu strong {
+      display: block;
+      color: var(--brun);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .info-contenu p, .info-contenu a {
+      font-size: 0.95rem;
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    .info-contenu a:hover { color: var(--or); }
+
+    /* Horaires */
+    .horaires-tableau {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+    }
+
+    .horaires-tableau td {
+      padding: 4px 0;
+      font-size: 0.92rem;
+      color: var(--gris);
+    }
+
+    .horaires-tableau td:first-child {
+      font-weight: 700;
+      color: var(--brun-clair);
+      width: 110px;
+    }
+
+    .horaires-tableau tr.ferme td { color: #b5a09a; }
+
+    /* Map */
+    .contact-map {
+      margin-top: 28px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--ombre);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      display: block;
+    }
+
+    /* Formulaire */
+    .formulaire-titre {
+      font-size: 1.6rem;
+      color: var(--brun);
+      margin-bottom: 28px;
+    }
+
+    .form-grille {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-groupe {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-groupe.pleine-largeur { grid-column: 1 / -1; }
+
+    .form-groupe label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--brun-clair);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .form-groupe input,
+    .form-groupe select,
+    .form-groupe textarea {
+      padding: 13px 16px;
+      border: 1.5px solid #e0d0bb;
+      border-radius: 10px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      color: var(--texte);
+      background: var(--blanc);
+      transition: var(--transition);
+      outline: none;
+      appearance: none;
+    }
+
+    .form-groupe input:focus,
+    .form-groupe select:focus,
+    .form-groupe textarea:focus {
+      border-color: var(--or);
+      box-shadow: 0 0 0 3px rgba(200,134,10,0.12);
+    }
+
+    .form-groupe textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-submit {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .form-note {
+      font-size: 0.82rem;
+      color: var(--gris);
+    }
+
+    /* ================================================
+       FOOTER
+       ================================================ */
+    footer {
+      background: var(--texte);
+      color: rgba(255,255,255,0.75);
+      padding: 72px 0 0;
+    }
+
+    .footer-grille {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-marque .logo-nom { color: var(--creme); font-size: 1.3rem; }
+    .footer-marque .logo-tagline { margin-top: 2px; }
+
+    .footer-marque p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-top: 18px;
+      color: rgba(255,255,255,0.6);
+      max-width: 280px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .social-lien {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      color: rgba(255,255,255,0.7);
+    }
+
+    .social-lien:hover {
+      background: var(--or);
+      color: var(--blanc);
+      transform: translateY(-3px);
+    }
+
+    .footer-col h4 {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--or-clair);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.62);
+      transition: var(--transition);
+    }
+
+    .footer-col ul li a:hover { color: var(--or-clair); padding-left: 5px; }
+
+    .footer-bas {
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-bas p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-bas a {
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+
+    .footer-bas a:hover { color: var(--or-clair); }
+
+    .footer-credit {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-credit a {
+      color: var(--or);
+    }
+
+    /* ================================================
+       BOUTON FLOTTANT (CTA mobile)
+       ================================================ */
+    .cta-flottant {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: linear-gradient(135deg, var(--or), var(--or-clair));
+      color: var(--blanc);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 6px 24px rgba(200,134,10,0.5);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .cta-flottant:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 32px rgba(200,134,10,0.65);
+    }
+
+    /* ================================================
+       RESPONSIVE
+       ================================================ */
+    @media (max-width: 1024px) {
+      .apropos-grille { gap: 48px; }
+      .footer-grille { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      nav, .header-cta { display: none; }
+      .burger { display: flex; }
+
+      .bandeau-grille { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .bandeau-item { border-right: none; }
+
+      .apropos-grille { grid-template-columns: 1fr; }
+      .apropos-img-secondaire { width: 140px; height: 140px; right: -12px; bottom: -12px; }
+
+      .contact-grille { grid-template-columns: 1fr; }
+      .form-grille { grid-template-columns: 1fr; }
+
+      .footer-grille { grid-template-columns: 1fr 1fr; gap: 36px; }
+
+      .footer-bas { flex-direction: column; text-align: center; }
+
+      .cta-flottant { display: flex; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas .btn-contour { display: none; }
+      .bandeau-grille { grid-template-columns: repeat(2, 1fr); }
+      .footer-grille { grid-template-columns: 1fr; }
+    }
+
+    /* ================================================
+       SCROLL REVEAL (Intersection Observer)
+       ================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================================
+       HEADER FIXE
+       ================================================ -->
+  <header id="header">
+    <div class="navbar">
+
+      <!-- Logo -->
+      <a href="#hero" class="logo" aria-label="Boulangerie Au Pain Doré — Accueil">
+        <div class="logo-icone" aria-hidden="true">🥐</div>
+        <div class="logo-texte">
+          <span class="logo-nom">Au Pain Doré</span>
+          <span class="logo-tagline">Artisan Boulanger · Rennes</span>
+        </div>
+      </a>
+
+      <!-- Navigation desktop -->
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#specialites">Nos spécialités</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#temoignages">Avis clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA desktop -->
+      <div class="header-cta">
+        <a href="tel:+33299000000" class="btn-appel" aria-label="Appeler la boulangerie">
+          📞 Nous appeler
+        </a>
+      </div>
+
+      <!-- Burger mobile -->
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- Menu mobile déroulant -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Menu mobile">
+      <a href="#specialites" class="nav-mobile-lien">Nos spécialités</a>
+      <a href="#apropos"     class="nav-mobile-lien">À propos</a>
+      <a href="#temoignages" class="nav-mobile-lien">Avis clients</a>
+      <a href="#contact"     class="nav-mobile-lien">Contact &amp; Horaires</a>
+      <a href="tel:+33299000000" class="btn-appel" style="margin-top:16px;justify-content:center;">📞 Nous appeler</a>
+    </nav>
+  </header>
+
+
+  <!-- ================================================
+       SECTION HERO
+       ================================================ -->
+  <section id="hero" aria-label="Bienvenue à la Boulangerie Au Pain Doré">
+
+    <div class="hero-bg" role="img" aria-label="Photo de boulangerie artisanale"></div>
+
+    <div class="hero-contenu">
+      <div class="hero-badge">🏅 Artisan boulanger depuis 1987 · Rennes</div>
+
+      <h1 class="hero-titre">
+        Fait avec amour,<br>cuit <em>chaque matin</em>
+      </h1>
+
+      <p class="hero-sous-titre">
+        Baguettes tradition, croissants pur beurre et pâtisseries maison préparés
+        chaque jour par nos artisans boulangers au cœur de Rennes.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#specialites" class="btn btn-or">Découvrir nos spécialités</a>
+        <a href="#contact"     class="btn btn-contour" style="color:#fff;border-color:rgba(255,255,255,0.6);">Nos horaires</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">Défiler</div>
+
+  </section>
+
+
+  <!-- ================================================
+       BANDEAU CHIFFRES CLÉS
+       ================================================ -->
+  <section id="bandeau" aria-label="Chiffres clés">
+    <div class="container">
+      <div class="bandeau-grille">
+
+        <div class="bandeau-item reveal">
+          <div class="bandeau-chiffre">35+</div>
+          <div class="bandeau-label">Années d'expérience</div>
+        </div>
+
+        <div class="bandeau-item reveal reveal-delay-1">
+          <div class="bandeau-chiffre">20+</div>
+          <div class="bandeau-label">Produits artisanaux</div>
+        </div>
+
+        <div class="bandeau-item reveal reveal-delay-2">
+          <div class="bandeau-chiffre">4h</div>
+          <div class="bandeau-label">Heure du premier fournée</div>
+        </div>
+
+        <div class="bandeau-item reveal reveal-delay-3">
+          <div class="bandeau-chiffre">4,9 ⭐</div>
+          <div class="bandeau-label">Note Google moyenne</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION NOS SPÉCIALITÉS
+       ================================================ -->
+  <section id="specialites" aria-labelledby="titre-specialites">
+    <div class="container">
+
+      <div class="section-titre reveal">
+        <span class="sur-titre">Ce qui fait notre renommée</span>
+        <h2 id="titre-specialites">Nos spécialités artisanales</h2>
+        <p>Chaque produit est préparé avec des ingrédients sélectionnés, pétri à la main et cuit dans notre four à sole traditionnel.</p>
+        <div class="separateur"></div>
+      </div>
+
+      <div class="specialites-grille">
+
+        <!-- Produit 1 : Baguette -->
+        <article class="carte-produit reveal reveal-delay-1">
+          <div class="carte-produit-img">
+            <img
+              src="baguette.jpg"
+              alt="Baguette tradition artisanale Au Pain Doré, Rennes"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <span class="carte-tag">⭐ Best-seller</span>
+          </div>
+          <div class="carte-corps">
+            <h3>Baguette Tradition</h3>
+            <p>Notre baguette signature, longue fermentation sur poolish, croûte craquante et mie alvéolée. Prête dès 7h chaque matin.</p>
+            <div class="carte-pied">
+              <span class="carte-prix">1,20 €</span>
+              <span class="carte-etoiles">★★★★★</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produit 2 : Croissant -->
+        <article class="carte-produit reveal reveal-delay-2">
+          <div class="carte-produit-img">
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop&q=75"
+              alt="Croissant pur beurre feuilleté, boulangerie Au Pain Doré Rennes"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <span class="carte-tag">🧈 Pur beurre</span>
+          </div>
+          <div class="carte-corps">
+            <h3>Croissant Pur Beurre</h3>
+            <p>Feuilletage généreux au beurre AOP, dorure brillante et cœur fondant. Le croissant dont vous rêvez chaque week-end.</p>
+            <div class="carte-pied">
+              <span class="carte-prix">1,40 €</span>
+              <span class="carte-etoiles">★★★★★</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produit 3 : Pain spécial -->
+        <article class="carte-produit reveal reveal-delay-3">
+          <div class="carte-produit-img">
+            <img
+              src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&auto=format&fit=crop&q=75"
+              alt="Pain aux céréales et noix artisanal, Au Pain Doré Rennes"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <span class="carte-tag">🌾 Sans additifs</span>
+          </div>
+          <div class="carte-corps">
+            <h3>Pain Céréales &amp; Noix</h3>
+            <p>Mélange de graines (lin, tournesol, sésame) et de cerneaux de noix pour un pain généreux, idéal en tranches épaisses avec du beurre salé.</p>
+            <div class="carte-pied">
+              <span class="carte-prix">3,80 €</span>
+              <span class="carte-etoiles">★★★★★</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produit 4 : Pâtisserie -->
+        <article class="carte-produit reveal reveal-delay-4">
+          <div class="carte-produit-img">
+            <img
+              src="tarte-fraise.jpg"
+              alt="Tarte aux fraises pâtisserie maison boulangerie Au Pain Doré Rennes"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <span class="carte-tag">🍓 Saison</span>
+          </div>
+          <div class="carte-corps">
+            <h3>Tarte aux Fraises</h3>
+            <p>Pâte sucrée maison, crème pâtissière légère à la vanille de Madagascar et fraises françaises du marché. Disponible vendredi–dimanche.</p>
+            <div class="carte-pied">
+              <span class="carte-prix">4,50 €</span>
+              <span class="carte-etoiles">★★★★★</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION À PROPOS
+       ================================================ -->
+  <section id="apropos" aria-labelledby="titre-apropos">
+    <div class="container">
+      <div class="apropos-grille">
+
+        <!-- Images -->
+        <div class="apropos-images reveal">
+          <img
+            class="apropos-img-principale"
+            src="https://images.unsplash.com/photo-1568376794508-ae52c6ab3929?w=800&auto=format&fit=crop&q=80"
+            alt="Artisan boulanger pétrissant la pâte dans la boulangerie Au Pain Doré à Rennes"
+            loading="lazy"
+            width="800"
+            height="600"
+          />
+          <img
+            class="apropos-img-secondaire"
+            src="https://images.unsplash.com/photo-1515446134809-993c501ca304?w=400&auto=format&fit=crop&q=80"
+            alt="Pains frais sortant du four de la boulangerie Au Pain Doré"
+            loading="lazy"
+            width="400"
+            height="400"
+          />
+          <div class="apropos-badge-annee" aria-label="Depuis 1987">
+            <strong>1987</strong>
+            <span>Depuis</span>
+          </div>
+        </div>
+
+        <!-- Texte -->
+        <div class="apropos-texte reveal reveal-delay-2">
+          <span class="sur-titre">Notre histoire</span>
+          <h2 id="titre-apropos">Une passion transmise de génération en génération</h2>
+          <p>
+            Fondée en 1987 par Marcel Dupont, <strong>Boulangerie Au Pain Doré</strong> est aujourd'hui tenue par sa fille Claire,
+            qui perpétue avec fierté les recettes familiales au cœur de Rennes. Deux fournées par jour, jamais de compromis sur la qualité.
+          </p>
+          <p>
+            Ici, on ne réchauffe pas des produits industriels. Tout est pétri, façonné et cuit sur place, avec de la farine locale
+            issue de moulins bretons. C'est ça, l'artisanat véritable.
+          </p>
+
+          <div class="apropos-valeurs">
+            <div class="valeur-item">
+              <div class="valeur-icone" aria-hidden="true">🌿</div>
+              <div class="valeur-texte">
+                <h4>Ingrédients locaux &amp; naturels</h4>
+                <p>Farines bretonnes, beurre AOP Charentes-Poitou, œufs fermiers — rien que du vrai.</p>
+              </div>
+            </div>
+            <div class="valeur-item">
+              <div class="valeur-icone" aria-hidden="true">⏰</div>
+              <div class="valeur-texte">
+                <h4>Fraîcheur garantie chaque matin</h4>
+                <p>Levée à 4h, première fournée à 6h30. Vous mangez du pain du jour, toujours.</p>
+              </div>
+            </div>
+            <div class="valeur-item">
+              <div class="valeur-icone" aria-hidden="true">🤝</div>
+              <div class="valeur-texte">
+                <h4>Une vraie adresse de quartier</h4>
+                <p>On connaît nos clients par leur prénom. C'est aussi ça, le commerce local rennais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION TÉMOIGNAGES
+       ================================================ -->
+  <section id="temoignages" aria-labelledby="titre-temoignages">
+    <div class="container">
+
+      <div class="section-titre reveal">
+        <span class="sur-titre">Ce que disent nos clients</span>
+        <h2 id="titre-temoignages">Ils nous font confiance</h2>
+        <p>Plus de 350 avis 5 étoiles sur Google Maps. Voici quelques mots de nos clients fidèles.</p>
+        <div class="separateur"></div>
+      </div>
+
+      <div class="temoignages-grille">
+
+        <article class="carte-temoignage reveal reveal-delay-1">
+          <div class="temoignage-etoiles" aria-label="5 étoiles">★★★★★</div>
+          <p class="temoignage-texte">
+            « Je passe chaque matin avant d'aller au bureau. La baguette tradition est parfaite — croustillante dehors, 
+            moelleuse dedans. C'est simple, mais c'est ce qu'on cherche. Jamais déçue en 4 ans ! »
+          </p>
+          <div class="temoignage-auteur">
+            <div class="auteur-avatar" aria-hidden="true">S</div>
+            <div class="auteur-info">
+              <strong>Sophie M.</strong>
+              <span>Cliente depuis 2020 · Rennes Centre</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte-temoignage reveal reveal-delay-2">
+          <div class="temoignage-etoiles" aria-label="5 étoiles">★★★★★</div>
+          <p class="temoignage-texte">
+            « Le pain au levain céréales est une révélation. Je l'achète en entier chaque samedi et il tient toute la semaine. 
+            Claire et son équipe sont toujours souriantes. Un vrai bonheur de boulangerie de quartier à Rennes. »
+          </p>
+          <div class="temoignage-auteur">
+            <div class="auteur-avatar" aria-hidden="true">T</div>
+            <div class="auteur-info">
+              <strong>Thomas G.</strong>
+              <span>Client fidèle · Rennes Saint-Hélier</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="carte-temoignage reveal reveal-delay-3">
+          <div class="temoignage-etoiles" aria-label="5 étoiles">★★★★★</div>
+          <p class="temoignage-texte">
+            « J'ai commandé une tarte aux fraises pour l'anniversaire de ma fille. Elle était magnifique et délicieuse. 
+            Tout le monde a demandé d'où elle venait ! Je recommande Au Pain Doré à tous mes amis rennais. »
+          </p>
+          <div class="temoignage-auteur">
+            <div class="auteur-avatar" aria-hidden="true">A</div>
+            <div class="auteur-info">
+              <strong>Amélie R.</strong>
+              <span>Cliente · Cesson-Sévigné</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECTION CONTACT
+       ================================================ -->
+  <section id="contact" aria-labelledby="titre-contact">
+    <div class="container">
+
+      <div class="section-titre reveal">
+        <span class="sur-titre">On est là pour vous</span>
+        <h2 id="titre-contact">Nous contacter</h2>
+        <p>Une commande spéciale ? Une question ? Écrivez-nous ou venez nous rendre visite à Rennes !</p>
+        <div class="separateur"></div>
+      </div>
+
+      <div class="contact-grille">
+
+        <!-- Infos pratiques -->
+        <div class="contact-info reveal">
+          <h3>Infos pratiques</h3>
+
+          <div class="info-bloc">
+            <div class="info-icone" aria-hidden="true">📍</div>
+            <div class="info-contenu">
+              <strong>Adresse</strong>
+              <p>12 Rue de la Monnaie<br>35000 Rennes, Bretagne</p>
+            </div>
+          </div>
+
+          <div class="info-bloc">
+            <div class="info-icone" aria-hidden="true">📞</div>
+            <div class="info-contenu">
+              <strong>Téléphone</strong>
+              <a href="tel:+33299000000">02 99 00 00 00</a>
+            </div>
+          </div>
+
+          <div class="info-bloc">
+            <div class="info-icone" aria-hidden="true">✉️</div>
+            <div class="info-contenu">
+              <strong>Email</strong>
+              <a href="mailto:bonjour@aupaindore-rennes.fr">bonjour@aupaindore-rennes.fr</a>
+            </div>
+          </div>
+
+          <div class="info-bloc">
+            <div class="info-icone" aria-hidden="true">🕐</div>
+            <div class="info-contenu">
+              <strong>Horaires d'ouverture</strong>
+              <table class="horaires-tableau" aria-label="Horaires de la boulangerie">
+                <tbody>
+                  <tr><td>Lundi – Vendredi</td><td>6h30 – 19h30</td></tr>
+                  <tr><td>Samedi</td><td>6h30 – 20h00</td></tr>
+                  <tr><td>Dimanche</td><td>7h00 – 13h30</td></tr>
+                  <tr class="ferme"><td>Lundi (soir)</td><td>Fermé</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Google Maps embed (Rennes centre) -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.6!2d-1.6780!3d48.1135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede2e6a29c0e3%3A0x40ca7b5a9a76b0b0!2sRennes%2C%20France!5e0!3m2!1sfr!2sfr!4v1710000000000"
+              allowfullscreen=""
+              loading="lazy"
+              title="Localisation Boulangerie Au Pain Doré sur Google Maps"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact (Spreeforms) -->
+        <div class="reveal reveal-delay-2">
+          <h3 class="formulaire-titre">Envoyer un message</h3>
+
+          <!--
+            Formulaire relié à Spreeforms.
+            Remplacer ACTION_URL par l'URL fournie par votre compte Spreeforms.
+          -->
+          <form
+            action="https://formspree.io/f/mgorvowa"
+            method="POST"
+            class="form-grille"
+            novalidate
+            aria-label="Formulaire de contact"
+          >
+
+            <!-- Champs cachés Spreeforms -->
+            <input type="hidden" name="_redirect" value="https://aupaindore-rennes.fr/merci" />
+            <input type="hidden" name="_subject"  value="Nouveau message — Au Pain Doré" />
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-groupe">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Marie" required autocomplete="given-name" />
+            </div>
+
+            <div class="form-groupe">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name" />
+            </div>
+
+            <div class="form-groupe">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="marie@exemple.fr" required autocomplete="email" />
+            </div>
+
+            <div class="form-groupe">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" autocomplete="tel" />
+            </div>
+
+            <div class="form-groupe pleine-largeur">
+              <label for="sujet">Sujet</label>
+              <select id="sujet" name="sujet">
+                <option value="">— Choisir un sujet —</option>
+                <option value="commande">Commande spéciale / gâteau</option>
+                <option value="livraison">Livraison plateau entreprise</option>
+                <option value="info">Renseignement général</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-groupe pleine-largeur">
+              <label for="message">Votre message *</label>
+              <textarea id="message" name="message" placeholder="Bonjour, je souhaite commander…" required></textarea>
+            </div>
+
+            <div class="form-submit">
+              <p class="form-note">* Champs obligatoires. Réponse sous 24h.</p>
+              <button type="submit" class="btn btn-or">
+                Envoyer mon message ✉️
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grille">
+
+        <!-- Colonne 1 : Marque -->
+        <div class="footer-marque">
+          <div class="logo">
+            <div class="logo-icone" aria-hidden="true">🥐</div>
+            <div class="logo-texte">
+              <span class="logo-nom">Au Pain Doré</span>
+              <span class="logo-tagline">Artisan Boulanger · Rennes</span>
+            </div>
+          </div>
+          <p>
+            Boulangerie artisanale depuis 1987 au cœur de Rennes.
+            Tout est fait maison, cuit chaque matin pour que vous profitiez du meilleur.
+          </p>
+          <div class="footer-socials">
+            <a href="https://facebook.com" class="social-lien" aria-label="Facebook" rel="noopener noreferrer">f</a>
+            <a href="https://instagram.com" class="social-lien" aria-label="Instagram" rel="noopener noreferrer">📷</a>
+            <a href="https://www.google.com/maps" class="social-lien" aria-label="Avis Google" rel="noopener noreferrer">G</a>
+          </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#specialites">Nos spécialités</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#temoignages">Avis clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Produits -->
+        <div class="footer-col">
+          <h4>Nos produits</h4>
+          <ul>
+            <li><a href="#specialites">Baguettes &amp; Pains</a></li>
+            <li><a href="#specialites">Croissants &amp; Viennoiseries</a></li>
+            <li><a href="#specialites">Pains spéciaux</a></li>
+            <li><a href="#specialites">Pâtisseries maison</a></li>
+            <li><a href="#contact">Commandes spéciales</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Contact rapide -->
+        <div class="footer-col">
+          <h4>Contact rapide</h4>
+          <ul>
+            <li><a href="tel:+33299000000">📞 02 99 00 00 00</a></li>
+            <li><a href="mailto:bonjour@aupaindore-rennes.fr">✉️ bonjour@aupaindore-rennes.fr</a></li>
+            <li><a href="#contact">📍 12 Rue de la Monnaie, Rennes</a></li>
+            <li><a href="#contact">🕐 Lun–Ven : 6h30–19h30</a></li>
+            <li><a href="#contact">🕐 Sam : 6h30–20h | Dim : 7h–13h30</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Pied de page bas -->
+      <div class="footer-bas">
+        <p>© 2025 Boulangerie Au Pain Doré — 12 Rue de la Monnaie, 35000 Rennes | <a href="#">Mentions légales</a></p>
+        <p class="footer-credit">
+          Site créé par <a href="https://amiri.studio" rel="noopener noreferrer">Amiri Studio</a> · Développeur web en Bretagne
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================================================
+       BOUTON FLOTTANT APPEL (mobile)
+       ================================================ -->
+  <a href="tel:+33299000000" class="cta-flottant" aria-label="Appeler la boulangerie Au Pain Doré">
+    📞
+  </a>
+
+
+  <!-- ================================================
+       JAVASCRIPT
+       ================================================ -->
+  <script>
+    /* --- Header scroll --- */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* --- Burger menu mobile --- */
+    const burger   = document.getElementById('burger');
+    const navMob   = document.getElementById('nav-mobile');
+
+    burger.addEventListener('click', () => {
+      const open = navMob.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open);
+    });
+
+    // Fermer le menu en cliquant sur un lien
+    navMob.querySelectorAll('a').forEach(lien => {
+      lien.addEventListener('click', () => {
+        navMob.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* --- Scroll Reveal (Intersection Observer) --- */
+    const observateur = new IntersectionObserver((entrees) => {
+      entrees.forEach(entree => {
+        if (entree.isIntersecting) {
+          entree.target.classList.add('visible');
+          observateur.unobserve(entree.target); // une seule fois
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observateur.observe(el));
+
+    /* --- Lien d'ancre fluide pour tous les navigateurs --- */
+    document.querySelectorAll('a[href^="#"]').forEach(ancre => {
+      ancre.addEventListener('click', (e) => {
+        const cible = document.querySelector(ancre.getAttribute('href'));
+        if (cible) {
+          e.preventDefault();
+          cible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
